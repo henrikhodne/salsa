@@ -11,7 +11,7 @@ cd $DIR
 
 # Determine the version that we're building based on the contents
 # of vers.go.
-VERSION=$(grep "const version " vers.go | sed -e 's/.*"(.+)"$/\1/')
+VERSION=$(grep "const version " vers.go | sed -E 's/.*"(.+)"$/\1/')
 
 echo "Version: ${VERSION}"
 
